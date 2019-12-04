@@ -49,7 +49,8 @@ public class Navidad {
                         elf++;
                     }
 
-                    // Los caracteres de duende tienen el mismo patron que una parte de Noel, por lo que Duende también suma cuando suma Noel pero no a la inversa, por eso restamos las veces que aparece Noel con las que ha aparecido Duende.
+                    // Una parte del patrón de Noel es igual en el patrón de Elf, por lo tanto Elf es Elf - Noel (Para restarle las coincidencias causadas por Noel)
+                        
                     elf -= noel;
 
                     if (noel>0){
@@ -97,21 +98,18 @@ public class Navidad {
                         String compareReindeer ="";
                         String compareElf ="";
 
-                        // Si la posicion de la i es menor o igual al tamaño de los caracteres de Noel entonces coge el char en la posición i y en las 7 siguientes para comparar si son iguales
                         if (i+8 <= linea.length()){
                             for (int j = i; j < i+8; j++) {
                                 char d = linea.charAt(j);
                                 compareNoel += d;
                             }
                         }
-                        // Si la posicion de la i es menor o igual al tamaño de los caracteres de Reno entonces coge el char en la posición i y en las 3 siguientes para comparar si son iguales
                         if (i+4 <= linea.length()){
                             for (int j = i; j < i+4; j++) {
                                 char d = linea.charAt(j);
                                 compareReindeer += d;
                             }
                         }
-                        // Si la posicion de la i es menor o igual al tamaño de los caracteres de Duende entonces coge el char en la posición i y en las 4 siguientes para comparar si son iguales
                         if (i+5 <= linea.length()){
                             for (int j = i; j < i+5; j++) {
                                 char d = linea.charAt(j);
@@ -127,7 +125,6 @@ public class Navidad {
                         }
                     }
 
-                    // Los caracteres de duende tienen el mismo patron que una parte de Noel, por lo que Duende también suma cuando suma Noel pero no a la inversa, por eso restamos las veces que aparece Noel con las que ha aparecido Duende.
                     elf -= noel;
 
                     if (noel>0){
